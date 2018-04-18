@@ -26,7 +26,7 @@ public class Admin {
         this.startListening();
 
         this.printer = new Printer();
-        this.printer.printColored(COLOR, "Admin" + name + " woke up!");
+        this.printer.printColored(COLOR, "Admin " + name + " woke up!");
     }
 
     // TODO handle broadcast in other classes
