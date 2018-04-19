@@ -29,14 +29,16 @@ public class Admin {
         this.printer.printColored(COLOR, "Admin " + name + " woke up!");
     }
 
-    // TODO handle broadcast in other classes
+    //
     public void broadcast(String message) throws IOException {
 
         // * (star) can substitute for exactly one word.
         // # (hash) can substitute for zero or more words.
-        String routingKey = GLOBAL_ROUTING_KEY + ".#";
+        String routingKey = BROADCAST_ROUTING_KEY;
 
-        channel.basicPublish(EXCHANGE_NAME, routingKey, null, message.getBytes("UTF-8"));
+        String broadcast = String.format("%s;%s;%s;%s", "broadcast", "admin", name, message);
+
+        channel.basicPublish(EXCHANGE_NAME, routingKey, null, broadcast.getBytes("UTF-8"));
         printer.printColored(COLOR, name + " broadcasted: " + message);
     }
 

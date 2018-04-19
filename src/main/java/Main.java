@@ -13,6 +13,7 @@ public class Main {
         Technician t2 = new Technician("Steven", "knee", "head");
 
         Doctor d1 = new Doctor("Maciek");
+        Doctor d2 = new Doctor("Janusz");
 
         Admin a1 = new Admin("Dave");
 
@@ -26,7 +27,11 @@ public class Main {
 
         d1.postExaminationRequest("knee","pacjentPiotrek");
         d1.postExaminationRequest("knee","pacjentPiotrek");
+        d2.postExaminationRequest("knee","pacjentPiotrek");
 
+
+        Thread.sleep(2000);
+        a1.broadcast("To jest Broadcast!");
         Thread.sleep(1000000);
 
     }
