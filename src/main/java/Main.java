@@ -25,9 +25,9 @@ public class Main {
         System.out.println();
 
 
-        d1.postExaminationRequest("knee","pacjentPiotrek");
-        d1.postExaminationRequest("knee","pacjentPiotrek");
-        d2.postExaminationRequest("knee","pacjentPiotrek");
+        d1.postExaminationRequest("knee","patientPiotrek");
+        d1.postExaminationRequest("knee","patientKuba");
+        d2.postExaminationRequest("head","patientMichal");
 
 
         Thread.sleep(2000);
